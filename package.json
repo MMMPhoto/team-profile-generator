@@ -1,0 +1,31 @@
+{
+  "dependencies": {
+    "inquirer": "^9.0.0"
+  },
+  "name": "team-profile-generator",
+  "version": "1.0.0",
+  "description": "Team Profile Generator - Node js and Test Application",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MMMPhoto/team-profile-generator.git"
+  },
+  "keywords": [
+    "node",
+    "jest",
+    "inquirer"
+  ],
+  "author": "Max McDonough",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MMMPhoto/team-profile-generator/issues"
+  },
+  "homepage": "https://github.com/MMMPhoto/team-profile-generator#readme"
+}
