@@ -6,28 +6,16 @@ import inquirer from 'inquirer';
 
 // Import helper files
 import Employee from './lib/employee.js';
+import Manager from './lib/manager.js';
+import Engineer from './lib/engineer.js';
+import Intern from './lib/intern.js';
 import generateHTML from './src/generateHTML.js';
+import questions from './src/questions.js';
 
-inquirer.prompt([
-    {
-        type: 'input',
-        message: 'Enter Employee name',
-        name: 'name',
-    },
-    {
-        type: 'input',
-        message: 'Enter Employee ID',
-        name: 'id',
-    },
-    {
-        type: 'input',
-        message: 'Enter Employee email',
-        name: 'email',
-    }
-])
+inquirer.prompt(questions)
 .then((answers) => {
     console.log(answers);
-    const newEmployee = new Employee(answers.name, answers.id, answers.email);
+    const newEmployee = new Engineer(answers.name, answers.id, answers.email, answers.github);
 
     fs.writeFile('./dist/index.html', `${generateHTML(newEmployee)}`, (err) =>
         err ? console.log(err) : console.log('Success!')
