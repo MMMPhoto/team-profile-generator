@@ -9,7 +9,9 @@ export default function generateHTML(input) {
     </head>
     <body>
         <h1>THIS IS A TEST PAGE</h1>
-        <p1>Show User Input Here: ${input.test}
+        <p1>Employee name: ${input.name}</p1>
+        <p1>Employee id: ${input.id}</p1>
+        <p1>Employee email: ${input.email}</p1>
     </body>
     </html>`;
 };
