@@ -1,5 +1,5 @@
 export default function generateHTML(input) {
-    `<!DOCTYPE html>
+    return `<!DOCTYPE html>
     <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -9,7 +9,7 @@ export default function generateHTML(input) {
     </head>
     <body>
         <h1>THIS IS A TEST PAGE</h1>
-        <p1>Show User Input Here: ${input}
+        <p1>Show User Input Here: ${input.test}
     </body>
     </html>`;
 };
