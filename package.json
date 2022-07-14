@@ -4,6 +4,7 @@
   },
   "name": "team-profile-generator",
   "version": "1.0.0",
+  "type": "module",
   "description": "Team Profile Generator - Node js and Test Application",
   "main": "index.js",
   "directories": {
