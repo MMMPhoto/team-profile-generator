@@ -60,7 +60,12 @@ const questions = [{
     message: "Employee's school:",
     name: 'employeeschool',
     when: (answers) => answers.employeeChoice === 'Intern',
-}
-];
+},
+{
+    type: 'confirm',
+    message: 'Would you like to enter another Employee?',
+    name: 'repeatEmployee',
+    choices: ['yes', 'no'],
+}];
 
 export default questions;

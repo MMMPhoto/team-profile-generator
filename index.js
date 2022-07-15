@@ -12,7 +12,23 @@ import Intern from './lib/intern.js';
 import generateHTML from './src/generateHTML.js';
 import questions from './src/questions.js';
 
-inquirer.prompt(questions)
+// Set global variables
+let employeeList = [];
+
+
+function userInput(questions) {
+    return inquirer.prompt(questions).then((answers) => {
+        console.log(answers);
+        
+        if (answers.repeatEmployee) {
+            return userInput(questions);
+        } else {
+            return answers;
+        };
+    });
+};
+
+userInput(questions)
 .then((answers) => {
     console.log(answers);
     const newEmployee = new Engineer(answers.name, answers.id, answers.email, answers.github);
@@ -21,4 +37,3 @@ inquirer.prompt(questions)
         err ? console.log(err) : console.log('Success!')
     );
 });
-
