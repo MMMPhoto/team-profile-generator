@@ -29,13 +29,13 @@ const questions = [
 {
     type: 'input',
     message: "Please enter the Engineer's github profile:",
-    name: 'employeeGithub',
+    name: 'github',
     when: (answers) => answers.employeeType === 'Engineer',
 },
 {
     type: 'input',
     message: "Please enter the Intern's school:",
-    name: 'employeeschool',
+    name: 'school',
     when: (answers) => answers.employeeType === 'Intern',
 },
 {
