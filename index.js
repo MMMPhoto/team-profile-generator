@@ -49,7 +49,6 @@ function userInput(questions, firstTime) {
 
 userInput(questions, firstTime)
 .then((answers) => {
-    createEmployeeList(answers);
     console.log(employeeList);
     fs.writeFile('./dist/index.html', `${generateHTML(employeeList)}`, (err) =>
         err ? console.log(err) : console.log('Success!')
