@@ -14,13 +14,14 @@ import questions from './src/questions.js';
 
 // Set global variables
 let employeeList = [];
+let firstTime = true;
 
 
-function userInput(questions) {
-    return inquirer.prompt(questions).then((answers) => {
-        console.log(answers);
-        
-        if (answers.repeatEmployee) {
+function userInput(questions, firstTime) {
+    if (firstTime) console.log("Welcome to the Team Profile Generator!");
+    return inquirer.prompt(questions).then((answers) => { 
+        if (answers.anotherEmployee) {
+            firstTime = false;
             return userInput(questions);
         } else {
             return answers;
@@ -28,7 +29,7 @@ function userInput(questions) {
     });
 };
 
-userInput(questions)
+userInput(questions, firstTime)
 .then((answers) => {
     console.log(answers);
     const newEmployee = new Engineer(answers.name, answers.id, answers.email, answers.github);

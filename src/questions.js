@@ -1,70 +1,47 @@
-const questions = [{
-    type: 'input',
-    message: "Welcome to the Team Profile Generator. Please enter your Manager's name:",
-    name: 'managerName'
-},
-{
-    type: 'input',
-    message: "Manager's ID:",
-    name: 'managerId',
-},
-{
-    type: 'input',
-    message: "Manager's email:",
-    name: 'managerEmail',
-},
-{
-    type: 'input',
-    message: "Manager's office number:",
-    name: 'officeNumber',
-},
-{
-    type: 'confirm',
-    message: 'Would you like to enter another Employee?',
-    name: 'newEmployee',
-    choices: ['yes', 'no'],
-},
+const questions = [
 {
     type: 'list',
-    message: 'Which employee type would you like to add?',
-    name: 'employeeChoice',
-    choices: ['Engineer', 'Intern'],
-    when: (answers) => answers.newEmployee === true,
+    message: 'Which kind of Employee would you like to enter?',
+    name: 'employeeType',
+    choices: ['Manager', 'Engineer', 'Intern'],
 },
 {
     type: 'input',
-    message: "Please enter the employee's name:",
+    message: "Please enter the Employee's name:",
     name: 'employeeName',
-    when: (answers) => answers.newEmployee === true,
 },
 {
     type: 'input',
-    message: "Employee's ID:",
+    message: "Please enter the Employee's ID:",
     name: 'employeeId',
-    when: (answers) => answers.newEmployee === true,
 },
 {
     type: 'input',
-    message: "Employee's email:",
+    message: "Please enter the Employee's email:",
     name: 'employeeEmail',
-    when: (answers) => answers.newEmployee === true,
 },
 {
     type: 'input',
-    message: "Employee's github profile:",
+    message: "Please enter the Manager's office number:",
+    name: 'officeNumber',
+    when: (answers) => answers.employeeType === 'Manager',
+},
+{
+    type: 'input',
+    message: "Please enter the Engineer's github profile:",
     name: 'employeeGithub',
-    when: (answers) => answers.employeeChoice === 'Engineer',
+    when: (answers) => answers.employeeType === 'Engineer',
 },
 {
     type: 'input',
-    message: "Employee's school:",
+    message: "Please enter the Intern's school:",
     name: 'employeeschool',
-    when: (answers) => answers.employeeChoice === 'Intern',
+    when: (answers) => answers.employeeType === 'Intern',
 },
 {
     type: 'confirm',
     message: 'Would you like to enter another Employee?',
-    name: 'repeatEmployee',
+    name: 'anotherEmployee',
     choices: ['yes', 'no'],
 }];
 
