@@ -10,7 +10,6 @@
   "directories": {
     "lib": "lib"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "jest"
   },
@@ -28,5 +27,8 @@
   "bugs": {
     "url": "https://github.com/MMMPhoto/team-profile-generator/issues"
   },
-  "homepage": "https://github.com/MMMPhoto/team-profile-generator#readme"
+  "homepage": "https://github.com/MMMPhoto/team-profile-generator#readme",
+  "devDependencies": {
+    "jest": "^28.1.3"
+  }
 }
