@@ -1,4 +1,6 @@
 export default function generateHTML(employeeList) {
+
+    // Generate Employee cards from employeeList Array
     let mainHTML = "";
     for (let i = 0; i < employeeList.length; i++) {
         let role = employeeList[i].getRole();
@@ -12,6 +14,7 @@ export default function generateHTML(employeeList) {
                 <p class="detail-item card-text p-1 ps-3 pe-2">ID: ${employeeList[i].id}</p>
                 <p class="detail-item card-text p-1 ps-3 pe-2">Email: <a href="mailto:${employeeList[i].email}">${employeeList[i].email}</a></p>`;
 
+        // Generate conitional data based on roles
         if (role === 'Manager') {
             mainHTML += `<p class="detail-item card-text p-1 ps-3 pe-2">Phone Number: ${employeeList[i].officeNumber}</p>
             </div></div>`;
@@ -24,6 +27,7 @@ export default function generateHTML(employeeList) {
         };      
     };
 
+    // Generic HTML Template
     return `<!DOCTYPE html>
             <html lang="en">
             <head>
@@ -36,10 +40,13 @@ export default function generateHTML(employeeList) {
                 <title>Team Profile</title>
             </head>
             <body>
+                <!-- Generic Header with page title -->
                 <header class="p-3 border-dark">
                     <h1 class="text-center">Team Profile</h1>
                 </header>
+                <!-- Main content div containing Employee Cards -->
                 <main class="d-flex flex-wrap container justify-content-center">
+                <!-- Employee Cards Generated Below -->
                 ${mainHTML}
                 </main>
             </body>

@@ -45,6 +45,7 @@ function userInput(questions, firstTime) {
     });
 };
 
+// Invoke User Input Function
 userInput(questions, firstTime)
 .then((answers) => {
     console.log(employeeList);
