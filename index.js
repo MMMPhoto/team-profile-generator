@@ -1,5 +1,3 @@
-console.log('Program started..');
-
 // Import core modules
 import fs from 'fs';
 import inquirer from 'inquirer';
