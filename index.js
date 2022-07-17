@@ -38,10 +38,8 @@ function userInput(questions, firstTime) {
         createEmployeeList(answers);
         if (answers.anotherEmployee) {
             firstTime = false;
-            console.log(answers);
             return userInput(questions);
         } else {
-            console.log(answers);
             return answers;
         };
     });
@@ -51,6 +49,6 @@ userInput(questions, firstTime)
 .then((answers) => {
     console.log(employeeList);
     fs.writeFile('./dist/index.html', `${generateHTML(employeeList)}`, (err) =>
-        err ? console.log(err) : console.log('Success!')
+        err ? console.log(err) : console.log('Success! Your HTML/CSS files were written to the dist folder.')
     );
 });
