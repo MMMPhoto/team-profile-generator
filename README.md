@@ -21,7 +21,7 @@
 
   To run the application, simply type "node index.js" from the command line within the project folder. The application will provide a series of prompts. Answer the prompts, and when finished, the application will generate your HTML and CSS files to the dist folder within the project folder.
   
-  [Video walkthrough of Using the App](https://drive.google.com/file/d/1PvrxBYWU4ZxIg4K1Ny6m36Uvreva2a5n/view)
+  [Video walkthrough of Using the App](https://drive.google.com/file/d/12Uif0OugC-A-shxEAIUYb0HWKwKnU6jB/view)
   
   [Sample HTML file in 'dist' directory of this REPO](./dist/index.html)
   
